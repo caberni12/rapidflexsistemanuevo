@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body, .slider, .slider-content, .menu-btn, .logo-container {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* --- LOGO --- */
+.logo-container {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- MENÚ HAMBURGUESA --- */
+.menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background-color: #0a0a0a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #111111;
+}
+
+/* --- SLIDER --- */
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slider.open {
+  height: 150px;
+}
+
+.slider-content {
+  opacity: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.slider.open .slider-content {
+  opacity: 1;
+}
+
+.slider-content h2 {
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+  border-bottom: 1px solid #777;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+/* --- CINTA DE BOTONES HORIZONTAL --- */
+.slider-buttons {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 10px;
+  padding-top: 10px;
+  scrollbar-width: thin;
+}
+
+.slider-buttons::-webkit-scrollbar {
+  height: 6px;
+}
+
+.slider-buttons::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.slider-buttons a {
+  white-space: nowrap;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #0c0c0c;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.slider-buttons a:hover {
+  background-color: #0a0a0a;
+}
